@@ -44,13 +44,13 @@ class oysterpop:
     	return season
     # asking for inputs from user -- add more info 
     def fetchsalinity():
-    	"""User inputs salinity values."""
+        """User inputs salinity values."""
         salin = input("Input salinity (typical range is 24-32ppt): ")
         salfloat = float(salin)
         return salfloat
     
     def fetchtemp(season):
-    	"""User inputs temperature values. Includes season dependent messages and requires season variable to be input."""
+        """User inputs temperature values. Includes season dependent messages and requires season variable to be input."""
         if season == "winter":
             tempin = input("Input temperature in °C (typical winter temp ranges from 4°C to 12°C): ")
             tempfloat = float(tempin)
@@ -69,29 +69,31 @@ class oysterpop:
         return tempfloat
     
     def fetchpH():
-    	"""User inputs pH."""
+        """User inputs pH."""
         pHin = input("Input pH (range from 7.8 to 8.3): ")
         pHfloat = float(pHin)
         return pHfloat
 #setting up storm function 
     def storm(season):
-    	"""Function to simulate a storm (hurricane or snow) depending on the season variable."""
+        """Function to simulate a storm (hurricane or snow) depending on the season variable."""
         if season == "summer":
             salin = 7 
             print ("****************\n*BREAKING NEWS*\nA huge hurricane has hit the coast! The salinity will drop dramatically.\nSalinity = 7ppt")
             salfloat = float(salin)
+            time.sleep(3)
         else:
             if season == "winter":
                 salin = 10
                 print ("****************\n*BREAKING NEWS*\nA huge snowstorm has hit and all the snow is melting reducing the coastal salinity dramatically.\nSalinity = 10ppt\n****************")
                 salfloat = float(salin)
+                time.sleep(3)
         return salfloat
 #runoff function
     def runoffpH(season):
-    	"""Run-off function that simulates reduced pH in coastal waters after nutrient input"""
+        """Run-off function that simulates reduced pH in coastal waters after nutrient input"""
         if season == "summer":
             pHin = 7.5
-            time.sleep(1)
+            time.sleep(3)
             print("****************\nThe hurricane has lead to nutrient rich coastal runoff.\nThe bacteria in coastal waters metabolize these nutrients and reduce the pH\npH = 7.5\n****************")
             pHfloat = float(pHin)
         else: pHin = input("Input pH (range from 7.8 to 8.3): ")
@@ -100,7 +102,7 @@ class oysterpop:
 
     #WORK ON POP SIM FUNCTION
     def popsim(self, salinities, temperatures, pHs):
-    	"""Simulation function incorporates values that the user inputs on the commandline from the 'fetch' functions."""
+        """Simulation function incorporates values that the user inputs on the commandline from the 'fetch' functions."""
         populationSizes = []  #initalize list of pop sizes through generations
         populationSizes.append(self.startSize)  #append start size at time 0 
         environments = zip(salinities, temperatures, pHs)  #group environmental parameters (these are the lists made from the user input)
