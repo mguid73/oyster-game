@@ -20,6 +20,7 @@ class oysterpop:
         self.site = site
     # SET SEASON FOR SIMULATION
     def setseason():
+    	"""User inputs season which will determine the temperature range they can input and the storm messages that occur later"""
     	print("Pick your season for running each population simulation! ...summer or winter?")
     	season = input("Type season here: ")
     	season = str.lower(season)
@@ -43,11 +44,13 @@ class oysterpop:
     	return season
     # asking for inputs from user -- add more info 
     def fetchsalinity():
+    	"""User inputs salinity values."""
         salin = input("Input salinity (typical range is 24-32ppt): ")
         salfloat = float(salin)
         return salfloat
     
     def fetchtemp(season):
+    	"""User inputs temperature values. Includes season dependent messages and requires season variable to be input."""
         if season == "winter":
             tempin = input("Input temperature in °C (typical winter temp ranges from 4°C to 12°C): ")
             tempfloat = float(tempin)
@@ -66,11 +69,13 @@ class oysterpop:
         return tempfloat
     
     def fetchpH():
+    	"""User inputs pH."""
         pHin = input("Input pH (range from 7.8 to 8.3): ")
         pHfloat = float(pHin)
         return pHfloat
 #setting up storm function 
     def storm(season):
+    	"""Function to simulate a storm (hurricane or snow) depending on the season variable."""
         if season == "summer":
             salin = 7 
             print ("****************\n*BREAKING NEWS*\nA huge hurricane has hit the coast! The salinity will drop dramatically.\nSalinity = 7ppt")
@@ -83,6 +88,7 @@ class oysterpop:
         return salfloat
 #runoff function
     def runoffpH(season):
+    	"""Run-off function that simulates reduced pH in coastal waters after nutrient input"""
         if season == "summer":
             pHin = 7.5
             time.sleep(1)
@@ -94,6 +100,7 @@ class oysterpop:
 
     #WORK ON POP SIM FUNCTION
     def popsim(self, salinities, temperatures, pHs):
+    	"""Simulation function incorporates values that the user inputs on the commandline from the 'fetch' functions."""
         populationSizes = []  #initalize list of pop sizes through generations
         populationSizes.append(self.startSize)  #append start size at time 0 
         environments = zip(salinities, temperatures, pHs)  #group environmental parameters (these are the lists made from the user input)
