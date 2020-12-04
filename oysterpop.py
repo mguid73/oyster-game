@@ -26,10 +26,10 @@ class oysterpop:
     	season = str.lower(season)
     	#print(season)
     	if season == "fall" or season == "spring":
-    		print("Incorrect season input... We've selected to run a summer simulation for you! Let's see if the oysters will spawn this month!\n.....Calibrating game for summer.")
+    		print("Incorrect season input... We've selected to run a summer simulation for you! Let's see if the oysters will spawn this month!\nCalibrating game for summer...")
     		season = "summer"
     	else:
-    		print("...Calibrating game for...", str.upper(season), "\n")
+    		print("Calibrating game for...", str.upper(season), "\n")
     		time.sleep(2)
     		input("*Press ENTER to continue*")
     		if season == "summer":
