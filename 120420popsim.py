@@ -364,7 +364,7 @@ fig, ax = plt.subplots(figsize=(14,8))
 ax.plot(t, NPpopulation, 'blue' ,linewidth= 5, label='Ninigret Pond')
 ax.plot(t, NRpopulation, 'green',linewidth= 5, label='Narrow River')
 # y limit
-ax.set_ylim([0,1000])
+ax.set_ylim([0,1500])
 #legend
 ax.legend()
 # title
