@@ -38,12 +38,12 @@ input("*Press ENTER to continue*")
 print("In the same way that human populations are unique, so too are oyster populations.\n*\nThis game will walk you through deciding the fate of 2 different oyster populations through on-screen prompts.\n*\nThe prompts will ask you to define environmental conditions(water salinity, temperature, and pH),\n*\nand the program will determine how each distinct population reacts to those changing conditions.\n*\nSuccess of a population will be measured through population size.\n*\nAt the end of the game, you will be able to see the population increase and decrease over time because of the decisions you made.", "\n")
 time.sleep(2)
 input("*Press ENTER to continue*")
-print("The goal of this game simulator is to investigate the survival of your oyster populations based on the decisions you make about their environment. So chose wisely!\n*\nThe oysters are depending on you!\U0001F9AA")
-print("To play, follow the prompts on the screen as they appear.")
+print("\nThe goal of this game simulator is to investigate the survival of your oyster populations based on the decisions you make about their environment. So chose wisely!\n*\nThe oysters are depending on you!\U0001F9AA")
+print("\nTo play, follow the prompts on the screen as they appear.")
 print("."*200, "\n")
 time.sleep(1)
 input("*Press ENTER to continue*")
-print("FIRST, let's get better aquainted with some fictional oyster populations in coastal Rhode Island.\n*\nA map will appear on the screen momentarily. Thank you for your patience...")
+print("\nFIRST, let's get better aquainted with some fictional oyster populations in coastal Rhode Island.\n*\nA map will appear on the screen momentarily. Thank you for your patience...\n")
 input("*Press ENTER to continue*")
 # map of fictional oyster pops to create some proximity to local environment and make the distinction between two populations with physical distance
 # Make a figure object.
@@ -56,7 +56,7 @@ img_extent = [-72.373, -70.503, 41.3, 42.063]
 img = plt.imread(fname)
 ax = plt.axes(projection=ccrs.PlateCarree())
 # figure title
-plt.suptitle('Investigate the three oyster populations shown below!\nOn this map of coastal Rhode Island you can see two fictional oyster populations\nthat each have distinct differences in the kinds of conditions they can thrive in.\nOnce you are finished investigating these populations, exit out of this map and\nthe figure pop-up window to continue the simulator game by following the on-screen prompts.')
+plt.suptitle('Investigate the two populations marked with yellow stars!\nEach fictional oyster population\nhas distinct conditions it thrives in.\nOnce you are finished investigating these populations, exit out of this map and\nthe figure pop-up window to continue the simulator game by following the on-screen prompts.')
 # set a margin around the data
 ax.set_xmargin(0.5)
 ax.set_ymargin(0.5)
@@ -110,12 +110,13 @@ time.sleep(1)
 print("\n")
 print("."*100, "\n")
 # tell user ninigret pond parameters
-print("Ninigret Pond oysters can survive and grow their population size under the following parameters:\npH= 8.1 \nsalinity= 24ppt \ntemperature= 27°C\n") #24, 27, 8.1
+print("Ninigret Pond oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 8.1 \n lowest salinity= 24ppt \nhighest temperature= 27°C\n") #24, 27, 8.1
 print("."*100, "\n")
 time.sleep(3)
 input("*Press ENTER to continue*")
+print("\n", "."*100, "\n")
 # tell user narrow river parameters
-print("Narrow River oysters can survive and grow their population size under the following parameters:\npH= 7.9 \nsalinity= 20ppt \ntemperature= 24°C\n")  #20, 24, 7.9
+print("Narrow River oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 7.9 \nlowest salinity= 20ppt \nhighest temperature= 24°C\n")  #20, 24, 7.9
 print("."*200, "\n")
 time.sleep(3)
 input("*Press ENTER to continue*")
@@ -143,7 +144,7 @@ season = op.oysterpop.setseason()
 
 # ## NINIGRET POND SIMULATION 
 print ("\n\n\U0001F9AA NINIGRET POND SIMULATION \U0001F9AA\n\n")
-print("Ninigret Pond oysters can survive and grow their population size under the following parameters:\npH= 8.1 \nsalinity= 24ppt \ntemperature= 27°C\n\n") #24, 27, 8.1
+print("Ninigret Pond oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 8.1 \n lowest salinity= 24ppt \nhighest temperature= 27°C\n\n") #24, 27, 8.1
 # set up parameters for Ninigret Pond using the op class framework
 input("*Press ENTER to continue*")
 NP = op.oysterpop("Ninigret Pond", 1000, 24, 27, 8.1)
@@ -249,7 +250,7 @@ else:
 ## NARROW RIVER SIMULATION
 print ("\n\n\U0001F9AA NARROW RIVER SIMULATION \U0001F9AA\n\n")
 # tell user narrow river parameters
-print("Narrow River oysters can survive and grow their population size under the following parameters:\npH= 7.9 \nsalinity= 20ppt \ntemperature= 24°C\n\n")  #20, 24, 7.9
+print("Narrow River oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 7.9 \nlowest salinity= 20ppt \nhighest temperature= 24°C\n\n")  #20, 24, 7.9
 input("*Press ENTER to continue*")
 # set up parameters for Ninigret Pond using the op class framework
 NR = op.oysterpop("Narrow River", 1000, 20, 24, 7.9)
@@ -379,10 +380,10 @@ plt.show()
 
 
 # include in end message
-print("You should have seen some difference in the population sizes over time.\n*\nPart of this variation is due to the differences in the populations themselves, part of it is due to the decisions you made for each population, and sometimes populations are influenced by random events.\n")
+print("\nYou should have seen some difference in the population sizes over time.\n*\nPart of this variation is due to the differences in the populations themselves,\n...part of it is due to the decisions you made for each population,\n...and sometimes populations are influenced by random events.\n")
 time.sleep(2)
 input("*Press ENTER to continue*")
-print("\nMuch like this simulation game, humans have the chance to make the right choices to save valuable species like oysters.\nThrough making smarter decisions and supporting policy that mitigates the effects of climate change, we can be better stewards of our planet.\n")
+print("\nMuch like this simulation game, humans have the chance to make the right choices to save valuable species like oysters.\n...\nThrough making smarter decisions and supporting policy that mitigates the effects of climate change, we can be better stewards of our planet.\n")
 time.sleep(10)
 print("\U0001F9AA\n")
 time.sleep(1)
@@ -396,7 +397,7 @@ print("THANK YOU FOR PLAYING!\n")
 time.sleep(3)
 print("*"*200)
 print("*"*200, "\n")
-print("For more information on this simplified model simulation, please contact Megan Guidry (by email at mguidry@uri.edu or on Twitter @meg_guidry)")
+print("For more information on this simple model simulation, please contact Megan Guidry (by email at mguidry@uri.edu or on Twitter @meg_guidry)\n")
 print("*"*200)
 print("*"*200, "\n")
 
