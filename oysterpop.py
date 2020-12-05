@@ -47,6 +47,10 @@ class oysterpop:
         """User inputs salinity values."""
         salin = input("Input salinity (typical range is 24-32ppt): ")
         salfloat = float(salin)
+        if (salfloat > 35):
+            print("Warning! Salinity cannot be above 35ppt.")
+            salin = input("Input salinity (typical range is 24-32ppt): ")
+            salfloat = float(salin)
         return salfloat
     
     def fetchtemp(season):
@@ -72,6 +76,10 @@ class oysterpop:
         """User inputs pH."""
         pHin = input("Input pH (range from 7.8 to 8.3): ")
         pHfloat = float(pHin)
+        if (6 >= pHfloat >= 9):
+            print("Warning! pH values are out of range.")
+            pHin = input("Input pH (range from 7.8 to 8.3): ")
+            pHfloat = float(pHin)
         return pHfloat
 #setting up storm function 
     def storm(season):
@@ -140,7 +148,7 @@ class oysterpop:
                     if (0 < temperature < self.temptol): #if temp is less than temp tolerance, 
                         newSize = newSize  #pop will remain the same size
                     else:
-                        if (temperature<0): #if user input is below zero, oysters will freeze and die :(
+                        if (temperature<=0): #if user input is below or at zero, oysters will freeze and die :(
                             newSize = 0
 
             #pH
@@ -155,6 +163,10 @@ class oysterpop:
                     newSize = newSize * .20 #pop size is reduced by 80%
                 if (pH >= (self.pHtol + 1)):  #if pH is 1 more basic than pH tolerance,
                     newSize = newSize * .20 #pop size is reduced by 80%
+                if (pH <= (self.pHtol - 1.5)): #if pH is 1.5 more acidic than tol, 
+                    newSize = 0  #pop dies
+                if (pH >= (self.pHtol + 1.5)):  #if pH is 1.5 more basic than tol,
+                    newSize = 0  #pop dies
                 
 
             populationSizes.append(newSize) #with every user input, new oyster population size determined by environment conditions
