@@ -83,8 +83,8 @@ class oysterpop:
         else: 
             if (pHfloat <= 6):
                 print("Warning! pH values are out of range.")
-            pHin = input("Input pH (range from 7.8 to 8.3): ")
-            pHfloat = float(pHin)
+                pHin = input("Input pH (range from 7.8 to 8.3): ")
+                pHfloat = float(pHin)
         return pHfloat
 #setting up storm function 
     def storm(season):
