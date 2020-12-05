@@ -56,7 +56,7 @@ img_extent = [-72.373, -70.503, 41.3, 42.063]
 img = plt.imread(fname)
 ax = plt.axes(projection=ccrs.PlateCarree())
 # figure title
-plt.suptitle('Investigate the two populations marked with yellow stars!\nEach fictional oyster population\nhas distinct conditions it thrives in.\nOnce you are finished investigating these populations, exit out of this map and\nthe figure pop-up window to continue the simulator game by following the on-screen prompts.')
+plt.suptitle('Investigate the two populations marked with yellow stars!\nEach fictional oyster population has distinct conditions it thrives in.\nOnce you are finished investigating these populations, exit out of this map and\nthe figure pop-up window to continue the simulator game by following the on-screen prompts.')
 # set a margin around the data
 ax.set_xmargin(0.5)
 ax.set_ymargin(0.5)
@@ -110,7 +110,7 @@ time.sleep(1)
 print("\n")
 print("."*100, "\n")
 # tell user ninigret pond parameters
-print("Ninigret Pond oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 8.1 \n lowest salinity= 24ppt \nhighest temperature= 27°C\n") #24, 27, 8.1
+print("Ninigret Pond oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 8.1 \nlowest salinity= 24ppt \nhighest temperature= 27°C\n") #24, 27, 8.1
 print("."*100, "\n")
 time.sleep(3)
 input("*Press ENTER to continue*")
@@ -144,7 +144,7 @@ season = op.oysterpop.setseason()
 
 # ## NINIGRET POND SIMULATION 
 print ("\n\n\U0001F9AA NINIGRET POND SIMULATION \U0001F9AA\n\n")
-print("Ninigret Pond oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 8.1 \n lowest salinity= 24ppt \nhighest temperature= 27°C\n\n") #24, 27, 8.1
+print("Ninigret Pond oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 8.1 \nlowest salinity= 24ppt \nhighest temperature= 27°C\n\n") #24, 27, 8.1
 # set up parameters for Ninigret Pond using the op class framework
 input("*Press ENTER to continue*")
 NP = op.oysterpop("Ninigret Pond", 1000, 24, 27, 8.1)
@@ -248,6 +248,7 @@ else:
 
 
 ## NARROW RIVER SIMULATION
+time.sleep(3)
 print ("\n\n\U0001F9AA NARROW RIVER SIMULATION \U0001F9AA\n\n")
 # tell user narrow river parameters
 print("Narrow River oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 7.9 \nlowest salinity= 20ppt \nhighest temperature= 24°C\n\n")  #20, 24, 7.9

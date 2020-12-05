@@ -76,8 +76,13 @@ class oysterpop:
         """User inputs pH."""
         pHin = input("Input pH (range from 7.8 to 8.3): ")
         pHfloat = float(pHin)
-        if (6 >= pHfloat >= 9):
+        if (pHfloat >= 9):
             print("Warning! pH values are out of range.")
+            pHin = input("Input pH (range from 7.8 to 8.3): ")
+            pHfloat = float(pHin)
+        else: 
+            if (pHfloat <= 6):
+                print("Warning! pH values are out of range.")
             pHin = input("Input pH (range from 7.8 to 8.3): ")
             pHfloat = float(pHin)
         return pHfloat
