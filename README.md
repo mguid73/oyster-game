@@ -3,5 +3,4 @@ This is a game created for educational science communication purposes. It is a s
 
 **Download the video demo in the files above to see the full gameplay!**
 
-
-Download *oysterpop.py* and game script and run from the command line to play for yourself!
+**To play for yourself, download *oysterpop.py* and game script (*120420popsim.py*) and run from the command line!**
