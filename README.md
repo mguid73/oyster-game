@@ -3,4 +3,4 @@ This is a game created for educational science communication purposes. It is a s
 
 **Download the video demo in the files above to see the full gameplay!**
 
-**To play for yourself, download *oysterpop.py* and game script (*120420popsim.py*) and run from the command line!**
+**To play for yourself, download *oysterpop.py*, game script (*120420popsim.py*), and *landsat.png* into the same folder; and (2) run the game script from the command line!**
