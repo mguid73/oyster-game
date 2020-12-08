@@ -378,7 +378,7 @@ ax.tick_params(axis="y", labelsize=24)
 ax.grid()
 # show and save figure
 plt.show()
-fig.savefig('graph.png')
+#fig.savefig('graph.png')
 
 
 # include in end message
