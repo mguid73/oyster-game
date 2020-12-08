@@ -24,9 +24,9 @@ Download the video demo in the files above to see the full gameplay!
   - if there is a knowlegde gap discovered through an incorrect answer of a screening question, the game will provide summary on that topic 
   - examples of screening questions pertaining to salinity: 
   		
-  		> *What is the salinity of full sea water? a) 63ppt b)100ppt c)35ppt d)10ppt*
+  		> What is the salinity of full sea water? a) 63ppt b)100ppt c)35ppt d)10ppt
   		
-  		> *Do oysters prefer high or low salinity? a) high b) low*
+  		> Do oysters prefer high or low salinity? a) high b) low
 * Adding in a more dramatic end screen to alert user when population has died and end the simulation once oysters have perished 
 * Provide the reason for why a population increased or decreased in size over time as a supplement to the % updates in the game
 * Long term goal: make a more sophisticated, realistic model that integrates a CO2 system calculator
