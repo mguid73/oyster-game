@@ -33,10 +33,10 @@ class oysterpop:
     		time.sleep(2)
     		input("*Press ENTER to continue*")
     		if season == "summer":
-    			print("*"*200, "\nSummer is when oysters will spawn to make new oysters! If the temperature reaches 20°C the population size will increase!\nKeep this in mind during the simulation if your population is declining.\n")
+    			print("*"*200, "\nSummer is when oysters will spawn to make new oysters! If the temperature reaches 68°F the population size will increase!\nKeep this in mind during the simulation if your population is declining.\n")
     		else:
     			if season == "winter":
-    				print("*"*200, "\nThe oysters are in for a chilly winter. Because oysters do not spawn below 20°C, there will be no way to increase their population size in the winter.\n")
+    				print("*"*200, "\nThe oysters are in for a chilly winter. Because oysters do not spawn below 68°F, there will be no way to increase their population size in the winter.\n")
     				time.sleep(2)
     				print("*\n" *5, "\n")
     				time.sleep(2)
@@ -56,21 +56,22 @@ class oysterpop:
     def fetchtemp(season):
         """User inputs temperature values. Includes season dependent messages and requires season variable to be input."""
         if season == "winter":
-            tempin = input("Input temperature in °C (typical winter temp ranges from 4°C to 12°C): ")
+            tempin = input("Input temperature in °F (typical winter temp ranges from 34°F to 54°F): ")
             tempfloat = float(tempin)
-            if (tempfloat > 15):
-                print("Sneaky, sneaky! You are in the winter simulation. Your temperature must be below 15°C\n")
+            if (tempfloat > 54):
+                print("Sneaky, sneaky! You are in the winter simulation. Your temperature must be below 54°F\n")
                 time.sleep(1)
-                tempin = input("Input temperature in °C (typical winter temp ranges from 4°C to 12°C): ")
+                tempin = input("Input temperature in °F (typical winter temp ranges from 34°F to 54°F): ")
         else:
             if season == "summer":
-                tempin = input("Input temperature in °C (typical summer temp ranges from 16°C to 23.5°C): ")
+                tempin = input("Input temperature in °F (typical summer temp ranges from 58°F to 78°F): ")
                 tempfloat = float(tempin)
-                if (tempfloat > 60):
-                    print("Wow! that's way too hot! Your oysters would all die, and we don't want that! Pick a temperature between 16°C to 30°C\n")
+                if (tempfloat > 85):
+                    print("Wow! that's way too hot! Your oysters would all die, and we don't want that! Pick a temperature between 58°F to 80°F\n")
                     time.sleep(1)
-                    tempin = input("Input temperature in °C (typical summer temp ranges from 16°C to 23.5°C): ")
-        return tempfloat
+                    tempin = input("Input temperature in °F (typical summer temp ranges from 58°F to 78°F): ")
+        tempC = (tempfloat - 32) * (5/9)
+        return tempC
     
     def fetchpH():
         """User inputs pH."""

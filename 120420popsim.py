@@ -110,13 +110,13 @@ time.sleep(1)
 print("\n")
 print("."*100, "\n")
 # tell user ninigret pond parameters
-print("Ninigret Pond oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 8.1 \nlowest salinity= 24ppt \nhighest temperature= 27°C\n") #24, 27, 8.1
+print("Ninigret Pond oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 8.1 \nlowest salinity= 24ppt \nhighest temperature= 80°F\n") #24, 27, 8.1
 print("."*100, "\n")
 time.sleep(3)
 input("*Press ENTER to continue*")
 print("\n", "."*100, "\n")
 # tell user narrow river parameters
-print("Narrow River oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 7.9 \nlowest salinity= 20ppt \nhighest temperature= 24°C\n")  #20, 24, 7.9
+print("Narrow River oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 7.9 \nlowest salinity= 20ppt \nhighest temperature= 75°F\n")  #20, 24, 7.9
 print("."*200, "\n")
 time.sleep(3)
 input("*Press ENTER to continue*")
@@ -132,7 +132,7 @@ time.sleep(3)
 # START SIMULATION MESSAGES
 print ("*"*100, "\nThe game will begin to prompt you for inputs about the conditions in Ninigret Pond and then Narrow River.\n...\nEach condition input will last for 5 'game days' with a total of 5 inputs meaning the game simulates 25 'days'\n...\nBe creative with your inputs!\nRemember, you decide the fate of these oyster populations!\n\n")
 input("*Press ENTER to continue*")
-print ("\nWill a big rainstorm reduce the salinity beyond the suggested range?\n...Will there be coastal pollution that dramatically reduces the pH?\n...Will there be a summer spawn at 20°C?\n")
+print ("\nWill a big rainstorm reduce the salinity beyond the suggested range?\n...Will there be coastal pollution that dramatically reduces the pH?\n...Will there be a summer spawn at 68°F?\n")
 input("*Press ENTER to continue*")
 # countdown -more drama
 print("GAME WILL BEGIN IN...")
@@ -144,7 +144,7 @@ season = op.oysterpop.setseason()
 
 # ## NINIGRET POND SIMULATION 
 print ("\n\n\U0001F9AA NINIGRET POND SIMULATION \U0001F9AA\n\n")
-print("Ninigret Pond oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 8.1 \nlowest salinity= 24ppt \nhighest temperature= 27°C\n\n") #24, 27, 8.1
+print("Ninigret Pond oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 8.1 \nlowest salinity= 24ppt \nhighest temperature= 80°F\n\n") #24, 27, 8.1
 # set up parameters for Ninigret Pond using the op class framework
 input("*Press ENTER to continue*")
 NP = op.oysterpop("Ninigret Pond", 1000, 24, 27, 8.1)
@@ -251,7 +251,7 @@ else:
 time.sleep(3)
 print ("\n\n\U0001F9AA NARROW RIVER SIMULATION \U0001F9AA\n\n")
 # tell user narrow river parameters
-print("Narrow River oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 7.9 \nlowest salinity= 20ppt \nhighest temperature= 24°C\n\n")  #20, 24, 7.9
+print("Narrow River oysters can tolerate the following parameters without extreme mortality:\noptimal pH= 7.9 \nlowest salinity= 20ppt \nhighest temperature= 75°F\n\n")  #20, 24, 7.9
 input("*Press ENTER to continue*")
 # set up parameters for Ninigret Pond using the op class framework
 NR = op.oysterpop("Narrow River", 1000, 20, 24, 7.9)
