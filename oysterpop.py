@@ -4,6 +4,7 @@
 
 # This class and defined functions are set up to model oyster populations through command line user input (salinity, temp, pH).
 # While it is set up for oyster populations, it could easily be adapted to model another species population.
+# This package is intended to be used for science eduction purposes in conjunction with a game script. 
 
 #import necessary packages
 import time
