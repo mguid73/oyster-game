@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
+
+# Created by Megan E Guidry - University of Rhode Island, Dept. of Biological Sciences
+
+# This class and defined functions are set up to model oyster populations through command line user input (salinity, temp, pH).
+# While it is set up for oyster populations, it could easily be adapted to model another species population.
+
+#import necessary packages
 import time
+
+
 
 # set up oyster population class
 class oysterpop:

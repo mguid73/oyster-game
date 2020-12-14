@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 
+# Created by Megan E Guidry - University of Rhode Island, Dept. of Biological Sciences
+
+# Game to show population evolutionary history differences and oyster population size change in response to changing environmental conditions. 
+# This game is intended to be used for science eduction purposes. 
+
+# Population simulation game is set up for oyster populations in coastal Rhode Island, however
+# it could be edited to portray another species or another location.
+
+
 #import packages 
 import numpy as np
 import matplotlib
@@ -10,7 +19,7 @@ import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 # time to add in delays for print statements- for dramatic effect
 import time
-# package made to deal with oyster pops
+# package designed for input data and pop simulation
 import oysterpop as op
 from oysterpop import *
 
@@ -40,10 +49,14 @@ time.sleep(2)
 input("*Press ENTER to continue*")
 print("\nThe goal of this game simulator is to investigate the survival of your oyster populations based on the decisions you make about their environment. So chose wisely!\n*\nThe oysters are depending on you!\U0001F9AA")
 print("\nTo play, follow the prompts on the screen as they appear.")
+time.sleep(2)
+input("*Press ENTER to continue*")
+print("\nFirst let's test your knowledge  ")
+
 print("."*200, "\n")
 time.sleep(1)
 input("*Press ENTER to continue*")
-print("\nFIRST, let's get better aquainted with some fictional oyster populations in coastal Rhode Island.\n*\nA map will appear on the screen momentarily. Thank you for your patience...\n")
+print("\nNow let's get better aquainted with some fictional oyster populations in coastal Rhode Island.\n*\nA map will appear on the screen momentarily. Thank you for your patience...\n")
 input("*Press ENTER to continue*")
 # map of fictional oyster pops to create some proximity to local environment and make the distinction between two populations with physical distance
 # Make a figure object.
