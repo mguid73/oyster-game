@@ -19,7 +19,7 @@ Download the video demo in the files above to see the full gameplay!
 ### Forthcoming updates to this project include:
 
 * ~~Celsius to Fahrenheit conversion so the user can input temperature in F~~
-* ~~Tailoring background to a more specific audience to fill in some knowledge gaps ~~
+* ~~Tailoring background to a more specific audience to fill in some knowledge gaps~~
   - ~~preliminary "screening" multiple choice questions to test user knowledge of coastal topics and oyster biology~~
   - ~~if there is a knowlegde gap discovered through an incorrect answer of a screening question, the game will provide summary on that topic~~
 * change spawning criteria to between 20-30degC (or 68-86degF) not just at 20degC (68degF)
