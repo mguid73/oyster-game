@@ -57,12 +57,12 @@ print("\nFirst let's test your knowledge with a few questions about oysters and 
 time.sleep(1)
 
 # USE QUESTIONS.PY to prompt user with general knowledge questions 
-print("#1\U0001F9AA\n"); qa.seawater()
-print("#2\n"); qa.sal()
-print("#3\n"); qa.spawntemp()
-print("#4\n"); qa.typicalpH()
-print("#5\n"); qa.pHchange()
-print("#6\n"); qa.oysterpH()
+# print("#1\U0001F9AA\n"); qa.seawater()
+# print("#2\U0001F9AA\n"); qa.sal()
+# print("#3\U0001F9AA\n"); qa.spawntemp()
+# print("#4\U0001F9AA\n"); qa.typicalpH()
+# print("#5\U0001F9AA\n"); qa.pHchange()
+# print("#6\U0001F9AA\n"); qa.oysterpH()
 
 #continue on to map
 print("."*200, "\n")
