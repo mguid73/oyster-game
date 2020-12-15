@@ -9,24 +9,26 @@
 # it could be edited to portray another species or another location.
 
 
-#import packages 
+#import general packages for plotting
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
-#cartopy imports
+#cartopy imports for mapping
 import cartopy
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 # time to add in delays for print statements- for dramatic effect
 import time
-# package designed for input data and pop simulation
+# module designed for input data and pop simulation
 import oysterpop as op
 from oysterpop import *
+# module for assessment questions
+import questions as qa
 
 #welcome message 
 print("\U0001F9AA"*100, "\n")
 print("WELCOME TO THE OYSTER POPULATION SIMULATOR GAME!")
-print("    Game maker: Megan Guidry, for CSC 593 term project", "\n")
+print("    Game maker: Megan Guidry", "\n")
 print("\U0001F9AA"*100, "\n")
 time.sleep(3)
 
@@ -54,12 +56,21 @@ input("*Press ENTER to continue*")
 print("\nFirst let's test your knowledge with a few questions about oysters and their environment!\n")
 time.sleep(1)
 
+# USE QUESTIONS.PY to prompt user with general knowledge questions 
+print("#1\U0001F9AA\n"); qa.seawater()
+print("#2\n"); qa.sal()
+print("#3\n"); qa.spawntemp()
+print("#4\n"); qa.typicalpH()
+print("#5\n"); qa.pHchange()
+print("#6\n"); qa.oysterpH()
 
+#continue on to map
 print("."*200, "\n")
 time.sleep(1)
 input("*Press ENTER to continue*")
 print("\nNow let's get better aquainted with some fictional oyster populations in coastal Rhode Island.\n*\nA map will appear on the screen momentarily. Thank you for your patience...\n")
 input("*Press ENTER to continue*")
+
 # map of fictional oyster pops to create some proximity to local environment and make the distinction between two populations with physical distance
 # Make a figure object.
 fig = plt.figure()
